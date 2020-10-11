@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css行内布局练习</title>
+        <style>
+            .first {
+                background-color: black;
+                min-width: 600px;
+            }
+            .first > p{
+                width: 500px;
+                margin: auto;
+                color: white;
+            }
+            .first+ div{
+                width: 600px;
+                margin: auto;
+            }
+            ul{
+                list-style: none;
+                
+            }
+            .one > li {
+                border: solid 3px;
+                line-height: 40px;
+                width: 180px;
+                height: 40px;
+                text-align: center;
+                margin-bottom: 15px;
+                background-color: rgb(255,192,203); 
+            }
+            .one > li:nth-child(n+5){
+                margin-left: 216px;
+            }
+            .one> li:nth-child(4n+5){
+                margin-top: -245px;
+            }
+            .one >li:last-child{
+                margin-bottom: 40px;
+            }
+            .one > li:nth-child(n+9){
+                margin-left: 432px;
+            }
+            .two>li{
+                border-bottom: dotted 1px;
+                margin-top: 15px;
+            }
+            .trh{
+                background-color: rgb(238,138,238);
+                min-width: 600px;
+            }
+            .trh>p{
+                width: 400px;
+                text-align: center;
+                margin: auto;
+            }
+            .one-div{
+                text-align: center;
+                margin-left: -60px;
+            }
+            .one-div > div{
+                display: inline-block;
+                border: solid 3px black;
+                background-color: rgb(255,192,203);
+                width: 180px;
+                height: 40px;
+                margin-bottom: 15px;
+                margin-left: 26px;
+                line-height: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+            <p>
+                hello world 请调整浏览器窗口大小查看效果
+            </p>
+        </div>
+        
+        <div>
+          <p>
+            页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+            页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px 页面主体 宽度600px
+          </p>  
+        </div>
+        <div>
+            <ul class="one">
+                <li>宽180高40(包含边框)</li>
+                <li>水平间隙30px</li>
+                <li>垂直间隙15px</li>
+                <li>边框宽度3px</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+                <li>产品</li>
+            </ul>
+        </div>
+        <div class="one-div">
+            <div>宽180高40(包含边框)</div>
+            <div>水平间隙30px</div>
+            <div>垂直间隙15px</div>
+            <div>边框宽度3pxx</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+            <div>产品</div>
+        </div>
+        <div>
+            <ul class="two">
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+                <li>link</li>
+            </ul>
+        </div>
+        <div class="trh">
+            <p>
+                ©版权所有<br>
+                本页所有布局均使用块元素
+            </p>
+        </div>
+    </body>
+</html>
