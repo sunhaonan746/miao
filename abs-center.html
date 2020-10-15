@@ -33,7 +33,7 @@
                 height: 800px;
                 margin: 20px auto;
                 line-height: 800px;
-                /* text-align: center; */
+                text-align: center;
             }
             img{
                 border: black solid 1px;
@@ -48,6 +48,17 @@
             img{
                 margin: auto calc(100%-250px); 
             }
+            div>div:nth-child(3){
+                border: solid black 1px;
+                width: 800px;
+                height: 800px;
+                margin: 20px auto;
+            }
+            td{
+                text-align: center;
+                width: 800px;
+                height: 800px;
+            }
         </style>
     </head>
     <body>
@@ -60,7 +71,15 @@
                 <!-- <span>a</span> -->
                 <img src="1.jpg">
             </div>
-
+            <div>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><img src="1.jpg"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </body> 
 </html>
