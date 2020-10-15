@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>object-fit练习</title>
+        <style>
+            div{
+                border: solid black 1px;
+
+            }
+            img{
+                width: 200px;
+                height: 200px;
+                border: black solid 1px;
+                object-fit: contain;
+            }
+            .a{
+                background-size: contain;
+                width: 100%;
+                height: 400px;
+                background-repeat: no-repeat;
+                background-image: url("https://bkimg.cdn.bcebos.com/pic/5243fbf2b21193136b3f495062380cd790238dd6?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5");
+            }
+            .b{
+                position: relative;
+                width: 100%;
+                height: 400px;
+            }
+            .b-a{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                left: 0;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img src="https://bkimg.cdn.bcebos.com/pic/5243fbf2b21193136b3f495062380cd790238dd6?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5" alt="摄像头">
+        </div>
+        <div class="a">
+        </div>
+        <div class="b">
+            <img  class="b-a" src="https://bkimg.cdn.bcebos.com/pic/5243fbf2b21193136b3f495062380cd790238dd6?x-bce-process=image/watermark,image_d2F0ZXIvYmFpa2U4MA==,g_7,xp_5,yp_5"
+                alt="摄像头">
+        </div>
+    </body>
+</html>

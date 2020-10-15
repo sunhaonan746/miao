@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>css菜单练习</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                margin: 200px ;
+                border: solid solid 1px;
+               
+                color: black;
+            }
+            ul{
+                border: black solid 1px;
+                list-style: none;
+                 background-color:orange;
+                 white-space: nowrap;
+            }
+            div>ul>li{
+                display: inline-block;
+                position: relative;
+            }
+            div>ul>li>ul{
+                position: absolute;
+                display: none;
+                top:100%;
+                width: 100%;
+            }
+            div>ul>li:nth-child(1):hover>ul,
+            div>ul>li:nth-child(2):hover>ul,
+            div>ul>li:nth-child(3):hover>ul,
+            div>ul>li:nth-child(4):hover>ul{
+                display: block;
+            }
+            div>ul>li>ul>li>ul{
+                position: absolute;
+                display: none;
+                left: 100%;
+            }
+            div>ul>li>ul>li:nth-child(1):hover ul,
+            div>ul>li>ul>li:nth-child(2):hover ul,
+            div>ul>li>ul>li:nth-child(3):hover ul,
+            div>ul>li>ul>li:nth-child(4):hover ul{
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <ul>
+                <li>文件
+                    <ul>
+                        <li>1
+                            <ul>
+                                <li>d111</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>2
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>3
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>编辑
+                    <ul>
+                        <li>1
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>2
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>3
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>选择
+                    <ul>
+                        <li>1
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>2
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>3
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>查看
+                    <ul>
+                        <li>1
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>2
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                        <li>3
+                            <ul>
+                                <li>001</li>
+                                <li>002</li>
+                                <li>003</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>

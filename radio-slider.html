@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>轮播图转换练习</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            div{
+                border: black solid 1px;
+                width: 600px;
+                height: 380px;
+                position: relative;
+                /* overflow: hidden; */
+            }
+          
+            img{
+                border:red solid 1px;
+                position: absolute;
+                top: 20px;
+                left: 600px;
+                transition: .6s;
+            } */
+
+            /* overflow 为heiddn 向左移动做法*/
+            /* input:nth-child(1):checked ~img:nth-child(6),
+            input:nth-child(2):checked ~img:nth-child(7),
+            input:nth-child(3):checked ~img:nth-child(8),
+            input:nth-child(4):checked ~img:nth-child(9),
+            input:nth-child(5):checked ~img:nth-child(10){
+                left: 0;
+            }
+            /* 透明度做法 */
+             /* 
+             img{
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                opacity: 0;
+            }
+             input:nth-child(1):checked ~img:nth-child(6),
+            input:nth-child(2):checked ~img:nth-child(7),
+            input:nth-child(3):checked ~img:nth-child(8),
+            input:nth-child(4):checked ~img:nth-child(9),
+            input:nth-child(5):checked ~img:nth-child(10){
+                opacity: 1;
+            } */
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="radio" name="s1">
+            <input type="radio" name="s1">
+            <input type="radio" name="s1">
+            <input type="radio" name="s1">
+            <input type="radio" name="s1">
+            <img src="http://travel.12306.cn/imgs/resources/uploadfiles/images/de470c1e-bd38-462c-87a3-0722c1022923_product_W572_H370.jpg" alt="a">
+            <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/b0c76b21-531b-4af4-a607-cf5672c72ded_product_W572_H370.jpg" alt="b">
+            <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/1716878f-79a2-4db1-af8c-b9c2039f0b3c_product_W572_H370.jpg" alt="c">
+            <img src="http://travel.12306.cn/imgs/resources/uploadfiles/images/177ffefe-b882-49c7-8fa1-9c278cc22361_product_W572_H370.jpg" alt="d">
+            <img src="https://travel.12306.cn/imgs/resources/uploadfiles/images/fcd7173f-7651-46e7-a126-bdc199e1f6f7_product_W572_H370.jpg" alt="d">
+        </div>
+    </body>
+</html>

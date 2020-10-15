@@ -1,0 +1,66 @@
+<!DOCtype html>
+<html>
+    <head>
+        <title>图片居中练习</title>
+        <style>
+            .aaa{
+                width: 1500px;
+                border: solid black 1px;
+            }
+            .a{
+                border: solid black 1px;
+                width: 800px;
+                height: 800px;
+                margin: 20px auto;
+                position: relative;
+            }
+            .a-a{
+                border: black 1px solid;
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                bottom: 0px;
+                right: 0px;
+                margin: auto;
+                width: 495px;
+                height: 495px;
+                background-repeat: no-repeat;
+                background-image: url(1.jpg);
+            }
+            .b{
+                border: solid black 1px;
+                width: 800px;
+                height: 800px;
+                margin: 20px auto;
+                line-height: 800px;
+                /* text-align: center; */
+            }
+            img{
+                border: black solid 1px;
+                vertical-align: middle;
+                /* margin: 151px; */
+            }
+            /* span{
+                display: inline-block;
+                text-indent: -9999999px;
+                line-height: 800px;
+            } */
+            img{
+                margin: auto calc(100%-250px); 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="aaa">
+            <div class="a">
+                <div class="a-a"></div>
+            </div>
+
+            <div class="b">
+                <!-- <span>a</span> -->
+                <img src="1.jpg">
+            </div>
+
+        </div>
+    </body> 
+</html>
