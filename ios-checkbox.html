@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>滑动开关练习</title>
+    <style>
+        div{
+            margin: calc(50% - 500px) auto;
+            width: 300px;
+            height: 100px;
+            border-radius: 60px;
+            border: solid 2px black;
+        }
+        .border{
+            position: relative;
+            transition: 1s;
+        }
+        .crlice{
+            display: inline-block;
+            width: 85px;
+            height: 85px;
+            border: rgb(0,0,0,0.7) solid 1px;
+            border-radius: 60px;
+            margin: 5px;
+            box-shadow:  0px 5px 15px;
+            transition: .6s;
+            position: absolute;
+            right: calc(100% - 100px);
+            background-color: white;
+        }
+        input{
+            display: none;
+        }
+        input:checked ~label .crlice{
+            right: 0;
+        }
+        input:checked ~label .border{
+           box-shadow: inset rgb(18, 248, 18) 0px 0px  200px;
+        }
+
+        /* input:checked +label .border-div{
+            background-color: yellowgreen;
+            z-index: 10;
+        } */
+        /* .border-div{
+            background-color: white;
+            position: absolute;
+            top: calc(50% - 500px);
+            transition: 1s;
+        } */
+    </style>
+    </head>
+    <body>
+            <input type="checkbox" id="a">
+            <label for="a">
+                <div class="border">ios-checkboox
+                    <div class="crlice">
+                    </div>
+                </div>
+                <!-- <div class="border-div">  
+                </div> -->
+            </label>
+       
+    </body>
+</html>

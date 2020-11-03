@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=700, initial-scale=1.0">
+    <title>MI 手机端</title>
+    <style>
+        html{
+            /* font-size: calc(100% / 1080); */
+        }
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 700px;
+            height: 900px;
+            border: orange solid 2px;
+        }
+        .top,.foot{
+            position: fixed;
+            width: 700px;
+            height: 70px;
+            background-color: red;
+            border: solid  1px blueviolet;
+        }
+        .top{
+            top: 0;
+        }
+        .foot{
+           bottom: 0;
+        }
+        .middle{
+            margin-top: 80px;
+            width: 700px;
+            background-color: #fff;
+            border: springgreen solid 1px;
+        }
+        .middle>div{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            border: thistle solid 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top"></div>
+    <div class="middle">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="foot"></div>
+</body>
+</html>

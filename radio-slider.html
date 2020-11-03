@@ -12,40 +12,40 @@
                 width: 600px;
                 height: 380px;
                 position: relative;
-                /* overflow: hidden; */
+                overflow: hidden;
             }
           
-            img{
+            /* img{
                 border:red solid 1px;
                 position: absolute;
                 top: 20px;
                 left: 600px;
                 transition: .6s;
+                overflow: hidden;
             } */
-
-            /* overflow 为heiddn 向左移动做法*/
-            /* input:nth-child(1):checked ~img:nth-child(6),
+            /* overflow 为heiddn 向左移动做法 */
+            input:nth-child(1):checked ~img:nth-child(6),
             input:nth-child(2):checked ~img:nth-child(7),
             input:nth-child(3):checked ~img:nth-child(8),
             input:nth-child(4):checked ~img:nth-child(9),
             input:nth-child(5):checked ~img:nth-child(10){
-                left: 0;
+                left: 0px;
             }
             /* 透明度做法 */
-             /* 
+             
              img{
-                position: absolute;
+                /* position: absolute; */
                 top: 20px;
                 left: 0px;
                 opacity: 0;
-            }
-             input:nth-child(1):checked ~img:nth-child(6),
+            }*/
+            input:nth-child(1):checked ~img:nth-child(6),
             input:nth-child(2):checked ~img:nth-child(7),
             input:nth-child(3):checked ~img:nth-child(8),
             input:nth-child(4):checked ~img:nth-child(9),
             input:nth-child(5):checked ~img:nth-child(10){
                 opacity: 1;
-            } */
+            } 
         </style>
     </head>
     <body>
