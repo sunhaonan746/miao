@@ -37,7 +37,7 @@
 <script type="norun" id="ch0103/06">
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
-    var c = (a / b).toFixed(3)
+    var c = (b / a * 100).toFixed(3)
     console.log(c,"%")
 </script>
 
@@ -75,7 +75,7 @@
 <script type="norun" id="ch0103/11">
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
-    console.log(a % b)
+    console.log((a % b).toFixed(4))
 </script>
 
 <script type="norun" id="ch0103/12">
@@ -277,11 +277,11 @@
 <script type="norun" id="ch0104/12">
     var a = Number(prompt("a"))
     if (((a / 3) + 50) > (a / 1.2)) {
-        console.log('walk')
+        console.log('Walk')
     } else if (((a / 3) + 50) == (a / 1.2)){
-        console.log('all')
+        console.log('All')
     } else {
-        console.log('bike')
+        console.log('Bike')
     }
 </script>
 
@@ -336,9 +336,9 @@
 <script type="norun" id="ch0104/17">
     var a = Number(prompt("a"))
     if (((a % 4 == 0) && (a % 100 != 0)) || a % 400 == 0) {
-        console.log('y')
+        console.log('Y')
     } else {
-        console.log('n')
+        console.log('N')
     }
 </script>
 
