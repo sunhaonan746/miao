@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+
 <script type="norun" id="ch0103/01">
   console.log(Number(prompt()) + Number(prompt()))
 </script>
@@ -6,6 +7,7 @@
 <script type="norun" id="ch0103/02">
     var x = Number(prompt("a"))
     var y = Number(prompt("b"))
+    debugger
     var z = Number(prompt("c"))
     var e = ((x + y) * z)
   console.log(e)
@@ -38,7 +40,7 @@
     var a = Number(prompt("a"))
     var b = Number(prompt("b"))
     var c = (b / a * 100).toFixed(3)
-    console.log(c,"%")
+    console.log(c + "%")
 </script>
 
 <script type="norun" id="ch0103/07">
@@ -148,7 +150,7 @@
 
 <script type="norun" id="ch0103/20">
     var a = Number(prompt("a"))
-    var d = 2^a
+    var d = 2 << a
     console.log(d)
 </script>
 
@@ -394,6 +396,718 @@
         console.log(a - e)
     }
 </script>
+
+<script type="norun" id="ch0105/01">
+    var a = Number(prompt("a"))
+    var x = 0
+    var y
+    var sum = 0
+    while (x < a) {
+        var z = Number(prompt(""))
+        var sum = sum + z
+        x += 1
+    }
+    y = sum / a
+    console.log(y.toFixed(2))
+</script>
+
+<script type="norun" id="ch0105/02">
+    var x , y, sum , z
+    x = 0 ,sum = 0
+    while (x < 12) {
+         z = Number(prompt(""))
+        sum = sum + z
+        x += 1
+    }
+    y = sum / 12
+    console.log("$" + y.toFixed(2))
+</script>
+
+<script type="norun" id="ch0105/03">
+    var a = Number(prompt("a"))
+    var x, y, sum, z
+    x = 0, sum = 0
+    while (x < a) {
+        z = Number(prompt(""))
+        sum = sum + z
+        x += 1
+    }
+    y = sum / a
+    console.log(y.toFixed(4))
+</script>
+
+<script type="norun" id="ch0105/04">
+    var a = Number(prompt("a"))
+    var x, y, sum, z
+    x = 0, sum = 0
+    while (x < a) {
+        z = Number(prompt(""))
+        sum = sum + z
+        x += 1
+    }
+    console.log(sum)
+    y = sum / a
+    console.log(y.toFixed(5))
+</script>
+
+<script type="norun" id="ch0105/05">
+    var a = Number(prompt("a"))
+    var x, sum, z 
+    sum = 0
+    x = 0
+    do {
+        z = Number(prompt(""))
+        x += 1
+        if (z > sum){
+            sum = z
+        }
+    } while (x < a)
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/06">
+    var a = Number(prompt("a"))
+    var x, sum, z, y
+    sum = 0
+    x = 0
+    y = 0
+    do {
+        z = Number(prompt(""))
+        x += 1
+        if (z > sum) {
+            sum = z
+        }else if (z < y){
+            y = z
+        }
+    } while (x < a)
+    console.log(sum - y)
+</script>
+
+<script type="norun" id="ch0105/07">
+    var n = Number(prompt("n"))
+    var a,x, y, z,x1 , y1 , z1,sum
+    x = 0, x1 = 0, y1 = 0 ,z1 = 0,a = 0
+    while (a < n) {
+         x = Number(prompt("x"))
+         y = Number(prompt("y"))
+         z = Number(prompt("z"))
+        x1 = x + x1
+        y1 = y + y1
+        z1 = z + z1
+        a = a + 1
+    }
+    sum = x1 + y1 + z1
+    console.log(x1,y1,z1,sum)
+</script>
+
+<script type="norun" id="ch0105/08">
+    var n = Number(prompt("n"))
+    var a , x, y ,sum 
+    a = 0,sum = 0
+    while (a < (n - 1)) {
+        x = Number(prompt("x"))
+       sum = sum + x
+        a = a + 1
+    }
+    y = (n - 2 )* 180 -sum
+    console.log(y)
+</script>
+
+<script type="norun" id="ch0105/09">
+    var m = Number(prompt("m"))
+    var n = Number(prompt("n"))
+    var sum = 0
+    while (m <= n) {
+        if (m % 2 != 0) {
+             sum = sum + m
+        }
+        m = m + 1
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/10">
+    var m = Number(prompt("m"))
+    var n = Number(prompt("n"))
+    var sum = 0
+    while (m <= n) {
+        if (m % 17 == 0) {
+            sum = sum + m
+        }
+        m = m + 1
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/11">
+    var k = Number(prompt("k"))
+    var a, x, x1, y,z
+    a = 0 
+    x1 = 0
+    y = 0 
+    z = 0 
+    while (a < k) {
+         x = Number(prompt()) 
+         a = a + 1
+        if (x == 1) {
+            x1 = x1 +1
+        } else if (x == 5) {
+            y = y + 1
+        }
+        else if (x == 10) {
+            z = z + 1
+        }
+    }
+    console.log(x1)
+    console.log(y)
+    console.log(z)
+</script>
+
+<script type="norun" id="ch0105/12">
+    var n = Number(prompt("n"))
+    var m = Number(prompt("m"))
+    var a, x, y
+    a = 0
+    y = 0
+    while (a < n) {
+        x = Number(prompt())
+        a = a + 1
+        if (x == m) {
+            y = y + 1
+        } 
+    }
+    console.log(y)
+</script>
+
+<script type="norun" id="ch0105/13">
+    var a = Number(prompt("a"))
+    var n = Number(prompt("n"))
+    var x = 0
+    var sum = 1
+    while (x < n) {
+        sum = sum * a
+        x = x + 1
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/14">
+    var x = Number(prompt("a"))
+    var n = Number(prompt("n"))
+    var a = 0
+    while (a < n) {
+        x = x * 1.001
+        a = a + 1
+    }
+    console.log(x.toFixed(4))
+</script>
+
+<script type="norun" id="ch0105/15">
+    var r = Number(prompt("r"))
+    var m = Number(prompt("m"))
+    var y = Number(prompt("y"))
+    var a = 0
+    while (a < y) {
+        m = m * (1 + r / 100)
+        a = a + 1
+    }
+    console.log(Math.floor(m))
+</script>
+
+<script type="norun" id="ch0105/16">
+    var n = Number(prompt("n"))
+    var k = Number(prompt("k"))
+    var a = 1
+    var sum = n
+    var x = 200
+    while (sum <  x  && a < 20) {
+        x = x * ( 1 + (k / 100))
+        sum = sum + n
+        a = a + 1
+    } 
+    if ( a == 1){
+        console.log(1)
+    }else if (a < 20 ) {
+        console.log(a)
+    } else {
+        console.log("Impossoble")
+    }
+</script>
+
+<script type="norun" id="ch0105/17">
+    var k = Number(prompt("k"))
+    var x ,y , z , a, sum
+    y = z = 1
+    x = 2
+    if (k <= 2 ) {
+        console.log(1)
+    }else {
+        while (x < k){
+            sum = y + z
+            y = z
+            z = sum
+            x +=1
+        }
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/18">
+    var k = Number(prompt("k"))
+    var a = 0
+    var x = Number(prompt("x"))
+    var y = Number(prompt("y"))
+    var sum = y / x
+    a = 1
+    while (a < k) {
+        a += 1
+        var b = Number(prompt("b"))
+        var c = Number(prompt("c"))
+        var z = c /b
+        if (z - sum > 0.05) {
+            console.log("better")
+        }else if (z - sum < 0.05 && z - sum > -0.05) {
+            console.log("same")
+        } else  {
+            console.log("worse")
+        }
+    }
+</script>
+
+<script type="norun" id="ch0105/19">
+    var k = Number(prompt("k"))
+    var a = 0
+    var sum = 0
+    while (a < k) {
+        a += 1
+        var x = Number(prompt("x"))
+        var y = Number(prompt("y"))
+        var p = Number(prompt("p"))
+        var z = Math.sqrt((x * x) + (y * y))
+        sum = sum + 2 * (z / 50) + p * 1.5 
+    }
+    console.log(Math.ceil(sum))
+</script>
+
+<script type="norun" id="ch0105/20">
+    var k = Number(prompt("k"))
+    var a = 0
+    var sum = 0
+   do {
+        a += 1
+        sum = sum + k * 1.5
+        k = k / 2
+   }while (a <= 9)
+   console.log((sum - k).toFixed(4))
+   console.log(k.toFixed(4))
+</script>
+
+<script type="norun" id="ch0105/21">
+    var k = Number(prompt("k"))
+    var a = 0
+    var sum = 0
+    var x = 0
+    var y
+    if (k % 2 != 0) {
+        a = k * 3 +1
+        console.log(k + "*" + "3" + "+" + "1" + "=" + a)
+        while (a != 1 ) {
+            x = a
+            a = a /2
+            y = a
+            console.log(x + "/" + "2" + "=" + y)
+        }
+    }else {
+        while (k != 1) {
+            console.log(k + "/" + "2" + "=" + sum)
+            sum = k
+            k = k / 2
+    }
+    }
+    console.log("End")
+</script>
+
+<script type="norun" id="ch0105/22">
+    var x ,y ,sum,a, result
+        sum = 0
+        a = 0
+    for(var i = 1 ;i <= 12 ; i++){
+        x = Number(prompt(""))
+        y = 300 - x 
+        a = a + y
+        var z = parseInt(a / 100)
+        if (z > 0) {
+            sum = sum + 100 * z
+            a = a - z * 100
+        }else if (a < 0 ){
+            console.log("-" + i)
+            result = "ture"
+           continue
+        } 
+        } 
+    if (result == "ture"){
+        
+    }else {
+        console.log(sum * 1.2 + a)
+    }
+</script>
+
+<script type="norun" id="ch0105/23">
+    var m = Number(prompt("m"))
+    var n = Number(prompt("n"))
+    var sum = 0
+    for (var i = 0 ; i < n; i++) {
+        var x = Number(prompt("x"))
+        if (m < x && m != 0 ){
+            sum++
+           continue 
+        }else {
+            m = m - x
+        }
+        if(m <= 0 ) {
+            console.log(n - i + sum)
+            break
+        }
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/24">
+    var n = Number(prompt("n"))
+    var sum = 0
+    var a = 0
+    for (var i = 0; i < n; i++) {
+        var x = Number(prompt("x"))
+        var y = Number(prompt("y"))
+        if (x <= 140 && x >= 90 && y <= 90 && y >= 60) {
+            sum++
+        } else {
+           sum = 0 
+        }
+        if (a < sum ) {
+            a = sum
+        }
+    }
+    console.log(a)
+</script>
+
+<script type="norun" id="ch0105/25">
+    var a1,a2,a3,b1,b2,b3
+    for (var i = 42; i < 999; i++) {
+        a1 = i % 7 
+        a2 = ((i - a1) / 7) % 7
+        a3 = (((i - a1) / 7 - a2) / 7) % 7
+        b1 = i % 9
+        b2 = ((i - b1) / 9 ) % 9
+        b3 =(((i - b1)/ 9 - b2) / 9 ) % 9
+        if (a1 == b3 && a2 == b2 && a3 == b1) {
+         console.log(i)
+         console.log("" + a1 + a2 + a3)
+         console.log("" + b1 + b2 + b3)
+    }
+    }
+</script>
+
+<script type="norun" id="ch0105/26">
+        var n = Number(prompt("n"))
+        var a, b , c, d, sum
+        var  result = 0
+    for (var i = 0; i < n; i++) {
+       var x = Number(prompt("x"))
+       d = x % 10   
+       c = parseInt(x / 10 ) % 10
+       b = parseInt(x / 100) % 10
+       a = parseInt(x / 1000) % 10
+       sum = d - c - b - a
+       if (sum > 0)
+        result++
+    }
+    console.log(result)
+</script>
+
+<script type="norun" id="ch0105/27">
+    var n = Number(prompt("n"))
+    var sum = 0
+    for (var i = 1; i < 99999; i++) {
+        sum = sum + 1 / i
+        if (sum > n){
+            console.log(i)
+            break
+        }
+    }
+</script>
+
+<script type="norun" id="ch0105/28">
+    var n = prompt("n")
+    var x = n.length
+    var result = ""
+    for( var i = 0 ; i <  x ; i++){
+        n = Number(n)
+        a = parseInt(n / 10**i) % 10
+        result = result + a
+    }
+    console.log(result)
+</script>
+
+<script type="norun" id="ch0105/29">
+    var n = prompt("n")
+    var x = n.length
+    var a 
+    var result = "" 
+    n = Number(n)
+    a = n % 10
+    if (n > 0){
+        if(a != 0){
+                for (var i = 0; i < x; i++) {
+                a = parseInt(n / 10 ** i) % 10
+                result = result + a
+            }
+            }else {
+                for (var i = 1; i < x; i++) {
+                    a = parseInt(n / 10 ** i) % 10
+                    result = result + a
+                }
+            }
+    }else{
+        n = - n 
+        if (a != 0) {
+            for (var i = 0; i < x - 1; i++) {
+                a = parseInt(n / 10 ** i) % 10
+                result = result + a
+            }
+        } else {
+            for (var i = 1; i < x - 1; i++) {
+                a = parseInt(n / 10 ** i) % 10
+                result = result + a
+            }
+        }
+        console.log(-result)
+    }
+    
+</script>
+
+
+<script type="norun" id="ch0105/30">
+    var m = prompt("m")
+    var n = m.length
+    m = Number(m)
+    var k = Number(prompt("n"))
+    var x 
+    var sum = 0
+    if (m % 19 == 0){
+        for (var i = 0 ; i < n ; i++){
+             x = parseInt(m / 10**i) % 10
+            if (x == 3){
+                sum++
+            }
+        }
+    }
+    if (sum == k ){
+        console.log("YES")
+    }else {
+        console.log("NO")
+    }
+</script>
+
+<script type="norun" id="ch0105/31">
+    var n = Number(prompt("m"))
+    var m = Number(prompt("n"))
+    var x
+    var result = ""
+    for(var i = 1 ; i < n ; i++){
+        x = 0
+        for (var j = 1 ; j < m ; j++){
+            if(i % j == 0){
+                x++
+            }
+        }
+        if(x % 2 == 1){
+            result = result + i + ","
+        }
+    }
+    console.log(result)
+</script>
+
+<script type="norun" id="ch0105/32">
+       var pi = 1
+        var n = prompt()
+        var sum = 0
+        function a(n) {
+            if (n == 1) {
+                return 2 / 1
+            } else {
+                return 1 + 1 / a(n - 1)
+            }
+        }
+        for (var i = 1; i <= n; i++) {
+            sum += a(i)
+        }
+        console.log(sum.toFixed(4))
+</script>
+
+<script type="norun" id="ch0105/33">
+     var n = prompt()
+        var sum = 0
+        for (var i = 1; i <= n; i++) {
+            if (i % 2 == 1) {
+                sum += 1 / i
+            } else {
+                sum -= 1 / i
+            }
+        }
+        console.log(sum.toFixed(4))
+</script>
+
+<script type="norun" id="ch0105/34">
+        var n = Number(prompt())
+        var sum = 0
+        var a = 1
+        for (var i = 1; i <= n; i++) {
+           a = a * i
+           sum = sum + a
+        }
+        console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/35">
+    var n = Number(prompt())
+    var sum = 1
+    var a = 1
+    for (var i = 1; i <= n; i++) {
+        a = a * i
+        sum = sum + 1 / a
+    }
+    console.log(sum.toFixed(10))
+</script>
+
+
+<script type="norun" id="ch0105/36">
+    var x = Number(prompt())
+    var n = Number(prompt())
+    var sum = 0
+    for (var i = 0; i <= n; i++) {
+        sum = sum + x**i
+    }
+    console.log(sum.toFixed(2))
+</script>
+
+<script type="norun" id="ch0105/37">
+    var m = Number(prompt("m"))
+    var n = Number(prompt("n"))
+    var x = Number(prompt("x"))
+    var a 
+    do {
+        n = parseInt(m / n) + n
+        x = x - Math.ceil(m / n )
+    }while (x > 0 && m - n >= 0  && x - (x - Math.ceil(m / n) <= 0))
+    console.log(n)
+</script>
+
+<script type="norun" id="ch0105/38">
+    var x = Number(prompt())
+    var n = Number(prompt())
+    var sum = 0
+    for (var i = 0; i <= n; i++) {
+        sum = sum + x ** i
+    }
+    console.log(sum.toFixed(2))
+</script>
+
+<script type="norun" id="ch0105/39">
+    var x = Number(prompt())
+    var sum = 0
+    debugger
+    for (var i = 0; i <= x; i++) {
+        if (i % 7 != 0 && i % 10 != 7 && i != 70){
+            sum = sum + i**2      
+          }
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/40">
+    var n = Number(prompt()) 
+    var a 
+    var sum = 0
+    var x
+    for (var i = 1 ; i <=n ; i++){
+         x = i.toString().length
+         for(var j = 0 ; j < x ; j++){
+            a = parseInt(i / 10 ** j) % 10
+            if (a == 1){
+                sum++
+            }
+         }
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/41">
+    var l = Number(prompt())
+    var r = Number(prompt())
+    var a
+    var sum = 0
+    var x
+    for (var i = l; i <= r; i++) {
+        x = i.toString().length
+        for (var j = 0; j < x; j++) {
+            a = parseInt(i / 10 ** j) % 10
+            if (a == 2) {
+                sum++
+            }
+        }
+    }
+    console.log(sum)
+</script>
+
+<script type="norun" id="ch0105/42">
+    var x = Number(prompt())
+    var y = Number(prompt())
+    var a = prompt()
+    var b = Number(prompt())
+    var sum
+    var c = " "
+    var d 
+    if(b == 0){
+        for(var i = 1 ; i <=y ; i++){
+            if(i == 1 || i == y){
+                sum = ""
+                for(var j = 0 ; j <x ; j++){
+                    sum = sum + a
+                }
+                console.log(" " + sum + " ")
+            }else{
+                d = ""
+                d = d + a
+                for (var j = 0 ; j < x - 2 ; j++){
+                   d = d + c  
+                }
+                d = d + a + "\n"
+                console.log(d)
+            }
+        }
+    }else {
+        var f 
+        for (var i = 1 ; i <= y ; i++ ){
+            f = ""
+            for(var j =0 ; j < x ; j++){
+                f = f + a
+            }
+            console.log(f)
+        }
+    }
+</script>
+
+<script type="norun" id="ch0105/43">
+    var x = Number(prompt())
+    var y = Number(prompt())
+    var a = prompt()
+    var b = Number(prompt())
+    
+</script>
+
+
+
 
 
 
