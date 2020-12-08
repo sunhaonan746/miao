@@ -2,20 +2,18 @@
 var sunhaonan746 = function () {
     function chunk(array, number) {
         var result = []
-        for (var i = 0; i < array.length / number; i++){
-            var a  = Array(number)
+        for (var i = 0; i < Math.ceil(array.length / number); i++){
+            var a  = Array()
             for (var j = 0; j < number; j++){
-                a.push(array[ i * number + j])
+                if (i * number + j < array.length) {
+                    a.push(array[ i * number + j])
+                } else {
+                    break
+                }
             }
             result.push(a)
         }
-        var b = [],c= array.length - 1
-        for (var i = 0; i < array.length % number; i++){
-            b.push(array[c])
-            c--
-        }
-        return result.push(b)
-
+        return result
     }
     
     return {
