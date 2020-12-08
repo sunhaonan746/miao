@@ -123,7 +123,7 @@ var sunhaonan746 = function () {
     //如果 fromIndex 为负值，将从数组array尾端索引进行匹配。
     function indexOf(array, value, fromIndex = 0) {
         if (fromIndex < 0) {
-            return lastIndexOf(array,value)
+            return lastIndexOf(array,value,array.length -2)
         } else {
             for (var i = fromIndex; i < array.length;i++){
                 if (array[i] == value) {
@@ -144,7 +144,8 @@ var sunhaonan746 = function () {
     function compact(array) {
         for (var i = 0; i < array.length;i++){
             if (!array[i]) {
-                array.splice(i,1)
+                array.splice(i, 1)
+                i--
             }
         }
         return array
@@ -195,9 +196,111 @@ var sunhaonan746 = function () {
             return array.length
         }
     }
+
+
+    //通过 predicate（断言函数） 检查 collection（集合）中的 所有 元素是否都返回真值。
+    //一旦 predicate（断言函数） 返回假值，迭代就马上停止。predicate（断言函数）调用三个参数： (value, index | key, collection) 。
+    function every(collection, predicate ) {
+        for (var i = 0; i < collection.length;i++){
+            if (!predicate(collection[i])) {
+                return false
+            }
+        }
+        return true
+    }
+
+
+    //遍历 collection（集合）元素，返回 predicate（断言函数）返回真值 的所有元素的数组。 predicate（断言函数）调用三个参数：(value, index|key, collection)。
+    function filter(collection, predicate = _.identity) {
+        
+    }
+
+
+    //遍历 collection（集合）元素，返回 predicate（断言函数）第一个返回真值的第一个元素。predicate（断言函数）调用3个参数： (value, index|key, collection)
+    function find(collection, predicate=_.identity, fromIndex=0) {
+        for (var i = fromIndex; i < collection.length;i++){
+            if (predicate(collection[i])) {
+                return true
+            }
+        }
+        return false
+    }
+
+
+    //转换 value 为一个数组。
+    function toArray(value) {
+        var a = []
+        if (typeof(value) == "object") {
+            for (let key in value) {
+                a.push(value[key])
+            }
+        } else {
+             for (var i = 0; i < value.length;i++){
+                a.push(value[i])
+            }
+        }
+       return a 
+    }
+
+
+
+    //计算 array 中的最大值。 如果 array 是 空的或者假值将会返回 undefined。
+    function max(array) {
+        if (!array.length) {
+            return undefined
+        }
+        var sum = -Infinity
+        for (var i = 0; i < array.length;i++){
+            if (sum < array[i]) {
+                sum = array[i]
+            }
+        }
+        return sum
+    }
+
+
+    //这个方法类似_.max 除了它接受 iteratee 来调用 array中的每一个元素，来生成其值排序的标准。 iteratee 会调用1个参数: (value) 。
+    function maxBy(array, iteratee) {
+        var a = []
+        for (var i = 0; i < array.length;i++){
+            if (iteratee(array[i])) {
+                a.push(array[i])
+            }
+        }
+        max(a)
+    }
+
+
+    //计算 array 中的最小值。 如果 array 是 空的或者假值将会返回 undefined。
+    function min(array) {
+        if (!array.length) {
+            return undefined
+        }
+        var sum = Infinity
+        for (var i = 0; i < array.length;i++){
+            if (sum > array[i]) {
+                sum = array[i]
+            }
+        }
+        return sum
+    }
+
+
+    //这个方法类似_.summin 除了它接受 iteratee 来调用 array中的每一个元素，来生成其值排序的标准。 iteratee 会调用1个参数: (value) 。
+    function sumBy(array, iteratee) {
+        var a = 0
+        for (var i = 0; i < array.length;i++){
+            if (iteratee(array[i])) {
+                a +=iteratee(array[i])
+            }
+        }
+       return a 
+    }
     
-    
-    
+
+
+
+
     return {
         chunk,
         join,
@@ -217,5 +320,13 @@ var sunhaonan746 = function () {
         dropRight,
         reverse,
         sortedIndex,
+        every,
+        filter,
+        find,
+        max,
+        maxBy,
+        min,
+        toArray,
+        sumBy,
     }
 }()
