@@ -51,7 +51,8 @@
 画一个大小合适的sin(x)的图像
    */
 </script>
-<script>
+<script src="./lena.js"></script>
+<script >
   // YOUR CODE GOES BELOW
   for (var i = 20 ; i < 150 ; i ++) {
     dot(i,5,"red")
@@ -116,6 +117,11 @@
       }
     }
    // 画一个rgb色彩空间的某一面
+    for (var i = 0; i < lena.length; i++) {
+        for (var j = 0; j < lena[i].length; j++) {
+          dot(i, j, "rgba" + "(" + lena[i][j][0] + "," + lena[i][j][1] + "," + lena[i][j][2] + ")")
+        }
+      }
 </script>
 <script>
  //画一个空心的圆
@@ -154,4 +160,5 @@ for (var i= 0 ; i < 400; i ++){
     dot(i , y, "black")
   }
 </script>
+
 </html>
